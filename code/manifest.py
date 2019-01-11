@@ -48,6 +48,7 @@ def create_manifest(data_dir,manifest_path):
         with codecs.open(manifest_path, 'w', 'utf-8') as fout:
             for line in json_lines:
                 fout.write(line + '\n')
+        fout.close()
 
 def main():
     if args.target_dir.startswith('~'):
